@@ -3,7 +3,7 @@ title: OpenWhere Blog
 email: info@openwhere.com
 description: > # this means to ignore newlines until "baseurl:"
   Cloud Infrastructure and Software Engineering
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/blog/" # the subpath of your site, e.g. /blog/
 url: "http://openwhere.github.io" # the base hostname & protocol for your site
 github_username:  OpenWhere
 
