@@ -41,8 +41,8 @@ You can also do ordered lists
 1. Test 3
 
 ## Detailed Section 3
-You can link to assets stuck int he assets folder
-![Streaming Survey]({{ site.url }}/assets/survey1.jpg)
+You can link to assets stuck in the assets folder
+![Streaming Survey]({{ site.url }}/assets/gitflow.png)
 
 *You can emphasize text*
 <br/>
