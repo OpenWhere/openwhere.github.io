@@ -9,3 +9,10 @@ github_username:  OpenWhere
 
 # Build settings
 markdown: kramdown
+
+# Blog Authors
+authors:
+  pierce:
+    display_name: Andrew Pierce
+    gravatar: 2804c426e5299c39cace93b8baf638ce
+    email: apierce@openwhere.com
