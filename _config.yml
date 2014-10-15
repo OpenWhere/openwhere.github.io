@@ -1,18 +1,32 @@
-# Site settings
-title: OpenWhere Blog
-email: info@openwhere.com
-description: > # this means to ignore newlines until "baseurl:"
-  Cloud Infrastructure and Software Engineering
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://openwhere.github.io" # the base hostname & protocol for your site
-github_username:  OpenWhere
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-# Build settings
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: true
 markdown: kramdown
 
-# Blog Authors
+title: OpenWhere Blog
+description: Cloud Infrastructure and Software Engineering
+
 authors:
   pierce:
-    display_name: Andrew Pierce
-    gravatar: 2804c426e5299c39cace93b8baf638ce
+    name: Andrew Pierce
     email: apierce@openwhere.com
+    gravatar: bdf3b5e10d7fb891416672504cadb19c
+    github: owap
+  sample:
+    name: dbyll
+    email: dbyll@ismaildemirbilek.com
+    github: dbtek
+    twitter: dbtek
+    pinterest: asd123
+    linkedin: asd123
+    bio: Your stylish, minimalist theme!
+    gravatar: 726351295ec82e145928582f595aa3aa
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:

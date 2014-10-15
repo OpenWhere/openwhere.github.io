@@ -1,0 +1,78 @@
+<! -- sidebar.html -->
+{% assign author = site.authors[page.author] %}
+
+<h2 class="title">
+    <a href="{{ site.BASE_PATH }}/">{{ site.title }}</a>
+</h2>
+
+<header class="sidebar-header" role="banner">
+  <a href="{{ site.BASE_PATH }}/">
+    {% if author.gravatar %}
+      <img src="http://www.gravatar.com/avatar/{{author.gravatar}}?s=150" class="img-rounded" />
+    {% else %}
+    <!-- Default OpenWhere logo -->
+      <img src="http://www.gravatar.com/avatar/c0668e0f829f904c43d24722d3f7b7ff?s=150" class="img-rounded" />
+    {% endif %}
+  </a>
+  
+  {% if author.name %}
+  <h4>
+    Post by <b>{{ author.name }}</b>
+  </h4>
+  {% endif %}
+
+</header>
+
+{% if author.bio %}
+<div id="bio" class="text-center">
+  {{ author.bio }}
+</div>
+{% endif %}
+
+<div id="contact-list" class="text-center">
+  <ul class="list-unstyled list-inline">
+    {% if author.github %}
+    <li>
+      <a class="btn btn-default btn-sm" href="https://github.com/{{ author.github }}">
+        <i class="fa fa-github-alt fa-lg"></i>
+      </a>
+    </li>
+    {% endif %}
+    {% if author.twitter %}
+    <li>
+      <a class="btn btn-default btn-sm" href="https://twitter.com/{{ author.twitter }}">
+        <i class="fa fa-twitter fa-lg"></i>
+      </a>
+    </li>
+    {% endif %}
+    {% if author.email %}
+    <li>
+      <a class="btn btn-default btn-sm" href="mailto:{{ author.email }}">
+        <i class="fa fa-envelope fa-lg"></i>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+  <ul id="contact-list-secondary" class="list-unstyled list-inline">
+    {% if author.pinterest %}
+    <li>
+      <a class="btn btn-default btn-sm" href="https://pinterest.com/{{ author.pinterest }}">
+        <i class="fa fa-pinterest fa-lg"></i>
+      </a>
+    </li>
+    {% endif %}
+    {% if author.linkedin %}
+    <li>
+      <a class="btn btn-default btn-sm" href="https://linkedin.com/pub/{{ author.linkedin }}">
+        <i class="fa fa-linkedin fa-lg"></i>
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <a class="btn btn-default btn-sm" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
+        <i class="fa fa-rss fa-lg"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+<! -- sidebar.html end -->
