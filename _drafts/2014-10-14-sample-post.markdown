@@ -3,7 +3,7 @@ layout: post
 title:  "An Example Blog Entry"
 date:   2014-10-14 18:00:04
 categories: example openwhere ec2 amazon architecture
-author: pierce
+author: aaslinger
 ---
 
 ## Summary

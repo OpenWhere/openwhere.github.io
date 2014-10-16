@@ -18,8 +18,9 @@ authors:
     linkedin: andrewaslinger
     bio: Senior Systems Architect
     gravatar: e8d3d442930c600d69a6e8ae254bb0e01
-  pierce:
+  apierce:
     name: Andrew Pierce
+    bio: Senior Software Engineer
     email: apierce@openwhere.com
     github: owap
     gravatar: bdf3b5e10d7fb891416672504cadb19c
