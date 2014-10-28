@@ -28,6 +28,7 @@ layout: post
 title:  "Sample Post"
 date:   2014-10-09 13:44:31
 categories: sample post
+author: apierce
 ---
 
 # Blog Post Title
@@ -44,6 +45,8 @@ three dashes:
 Blog post content blah blah...
 ```
 
-A sample post has been provided for you in the `_drafts` folder. Feel free to
-copy it to the `_posts` folder, but make sure you change the title to match
-today's date.
+A sample post has been provided for you in the `_drafts` folder.
+
+## Configuring Author Information
+Please add your author information to the `_config.yml` file. The `sample` user
+contains all valid fields.

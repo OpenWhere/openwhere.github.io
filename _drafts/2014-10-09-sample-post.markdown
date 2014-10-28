@@ -3,6 +3,7 @@ layout: post
 title:  "Sample Post"
 date:   2014-10-09 13:44:31
 categories: sample post
+author: apierce
 ---
 
 # Instantiating Farts
