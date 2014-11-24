@@ -61,7 +61,7 @@ It looks like AWS made a push to get ECS out in time for re:Invent (In limited p
 - Partner AMIs
 - Building a UI
 
-One of the tradeoffs people will have to make is how much tooling or process do you build now to get around the gaps. It can be dangerous to do so as AWS is sure to release more and more functionality over time as this year's re:Invent this year's re:Invent proves. (I'm guessing Code Deploy, Service Catalog, Auoroa, AWS Config, etc. are impact the tooling offered by many vendors).
+One of the tradeoffs people will have to make is how much tooling or process do you build now to get around the gaps. It can be dangerous to do so as AWS is sure to release more and more functionality over time as this year's re:Invent this year's re:Invent proves. (I'm guessing Code Deploy, Service Catalog, Aurora, AWS Config, etc. are impact the tooling offered by many vendors).
 
 ##Summary
 ECS looks like an extremely promising tool to use with Docker. We are likely to fully adopt the technology as it provides one of the last gaps for us, orchestration, and should minimize time spent on infrastructure and deployment issues. One of the other benefits that I am anticipating is that it should help institutionalize Docker best practices and make things like running a single process per Docker container easier, as it will now be more easier to control groupings of containers themselves. Stay tuned as we report back in the future on ECS lessons learned. 
