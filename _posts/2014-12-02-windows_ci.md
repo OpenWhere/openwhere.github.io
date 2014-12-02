@@ -104,5 +104,3 @@ scripting, and familiar tools like Jenkins, Windows has proven itself as an
 operating system capable of handling the best-practice tasks you may require of
 it. I say again: disparage not the Windows Operating System. It can get the job
 done easier than you might expect!
-
-<span style='font size:"0.2em";'>I still prefer Unix for basically everything, though.</span>
