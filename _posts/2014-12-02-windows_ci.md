@@ -32,7 +32,7 @@ by what you discover.
 
 This post is going to discuss how easy it is to set up a [Jenkins](http://jenkins-ci.org/)
 Continuous Integration server on a Windows machine, and why we would do such a
-thing when there are perfectly fine ways to install Jenkins in Unix.
+thing when there are perfectly fine ways to install Jenkins on Unix.
 
 # Why Jenkins on Windows?
 We need to install Jenkins on Windows because we need to build and deploy .NET
@@ -42,9 +42,9 @@ projects. To do this, we are using the following tools:
 + [MSBuild](http://msdn.microsoft.com/en-us/library/wea2sca5%28v=vs.90%29.aspx)
 + [MSDeploy](http://www.iis.net/downloads/microsoft/web-deploy)
 
-We're using PowerShell to automate the build and deploy tasks in Jenkins
-(referencing MSBuild and MSDeploy in our scripts) whenever code changes are
-pushed to git. While PowerShell has a Unix equivalent (shell scripting),
+Jenkins will run PowerShell scripts to build and deploy the code every time
+code is committed to the git repository using the `msbuild` and `msdeploy` tools.
+While PowerShell has a Unix equivalent (shell scripting),
 MSBuild and MSDeploy unfortunately do not. This is why we need to install
 Jenkins on a Windows machine, a process which turned out to be much easier
 than expected!
@@ -101,6 +101,6 @@ scripts above that invoke MSBuild and MSDeploy; just add your own variables!
 # Conclusion
 Fellow Knights of the Unix Order, the evidence is clear: between package managers,
 scripting, and familiar tools like Jenkins, Windows has proven itself as an
-operating system capable of handling the best-practice tasks you may require of
-it. I say again: disparage not the Windows Operating System. It can get the job
-done easier than you might expect!
+operating system capable of handling many of the best-practice tasks you may
+require of it. I say again: disparage not the Windows Operating System. It can
+get the job done easier than you might expect!
