@@ -77,18 +77,21 @@ you can automate your builds like so:
 + Project "Build" Section:
     - Batch command to run `NuGet.exe restore` on the `.sln` file we just checked out
     - "Build a Visual Stuido project or solution using MSBuild"
-    - Batch command to build the project package:
+
+## Continuous Integration PowerShell Scripts
++ Batch command to build the project package:
 
 ```
 & $msbuild $projectdir$project /target:Package /p:Configuration=Release /P:PackageLocation=$packageLocation
 ```
-    - Batch command to deploy the package we just built:
+
++ Batch command to deploy the package we just built:
 
 ```
 & $msdeploy -verb:sync -source:"package=$contentPath\caservice.zip" -dest:"auto,computerName=https://$($destination):8172/msdeploy.axd,authType=Basic,userName=$username,password='$password'"
 ```
 
-    - Batch command to run some [JMeter](http://jmeter.apache.org/) tests to validate the deployment
++ Batch command to run some [JMeter](http://jmeter.apache.org/) tests to validate the deployment
 + Post-Build Section:
     - JMeter performance metrics
 
@@ -102,4 +105,4 @@ operating system capable of handling the best-practice tasks you may require of
 it. I say again: disparage not the Windows Operating System. It can get the job
 done easier than you might expect!
 
-<span style='font-size:"0.2em";'>I still prefer Unix for basically everything, though.</span>
+<span style='font size:"0.2em";'>I still prefer Unix for basically everything, though.</span>
