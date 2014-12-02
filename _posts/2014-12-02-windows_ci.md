@@ -64,13 +64,14 @@ C:\> choco install jenkins
 
 # Setting up Build and Deploy in Jenkins
 Once Jenkins is installed (wasn't that simple?), now comes the "hard part" of
-setting up our build and deploy scripts. Fortunately, Jenkins on Windows comes
-pre-configured to run PowerShell scripts in Build and Post-build Actions, so
-you can automate your builds like so:
+setting up our build and deploy scripts.
+
+We took the following steps to configure our Windows CI server:
 
 + Manage Jenkins -> Download Plugins:
     - Git Plugin(s)
     - MSBuild plugin
+    - PowerShell Plugin (enables "Batch command" build option)
 + Configure Project:
     - [Source Code Management] Configure your git repository
     - [Build Triggers] "Build when a change is pushed to GitHub"
