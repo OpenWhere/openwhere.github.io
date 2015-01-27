@@ -49,7 +49,7 @@ The remainder of this tutorial will assume that NuGet executable lives here:
 ## 3. Create a New Jenkins Job
 Name the Jenkins Job after your application
 
-![Image]
+![Create a New Jenkins Job]({{ site.url }}/assets/img/2015-01-27/app_name.png)
 
 ## 4. Set up Source Code Management in the Job
 Set up Source Code Management to pull from Git. This is an involved step that
@@ -58,7 +58,8 @@ others have solved before, so I will link
 [resources](http://fourword.fourkitchens.com/article/trigger-jenkins-builds-pushing-github)
 for how to step through this process.
 
-![Image]
+![Set up Source Code Management]({{ site.url }}/assets/img/2015-01-27/git_setup.png)
+![Set up Source Code Management2]({{ site.url }}/assets/img/2015-01-27/git_setup_2.png)
 
 ## 5. Set up NuGet to run on your project
 After the project is pulled down from Git, running `NuGet restore` will download
@@ -72,13 +73,13 @@ Then, paste the following script in the box:
 
 ... where `<YourSolution.sln>` is the name of your .NET solution file.
 
-![Image]
+![NuGet]({{ site.url }}/assets/img/2015-01-27/nuget.png)
 
 ## 6. Build the Project
 In Jenkins, hit "Apply," and then (on the left-hand side) "Build Now."
 This will create the project and attempt to check the code out of Git.
 
-![Image]
+![First Build]({{ site.url }}/assets/img/2015-01-27/build1.png)
 
 If the build fails, resolve any problems before continuing on to the next step.
 
@@ -107,7 +108,7 @@ $packageLocation = "C:\builds\auditservice.zip"
 workspace directory path identified in Step 6, and `$packageLocation` is the
 path to which the project should be built.
 
-![Image]
+![MSBuild]({{ site.url }}/assets/img/2015-01-27/msbuild.png)
 
 ## 8. Provision a new EC2 Instance
 For our application, we're going to provision a new `Windows Server 2012 R2 Base`
@@ -123,7 +124,7 @@ security group:
     + 443       (HTTPS)
     + 8172      (WebDeploy)
 
-![Image]
+![Security Groups]({{ site.url }}/assets/img/2015-01-27/security_groups.png)
 
 It is **ESPECIALLY IMPORTANT** that you ensure that the WebDeploy port (8172)
 is accessible from our Jenkins server! Otherwise, you will not be able to
@@ -171,6 +172,8 @@ not yet followed this section of the guide, the short version is:
 + Right-click on Default Web Site, select Deploy, select "Configure Web Deploy Publishing"
 + Select the Jenkins user from the top dropdown
 + Click Setup
+
+![Web Deploy User Perms]({{ site.url }}/assets/img/2015-01-27/web_deploy_user.png)
 
 ### Re-register ASP.NET:
 Into a command prompt, paste:
